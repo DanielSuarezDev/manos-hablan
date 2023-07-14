@@ -1,0 +1,15 @@
+/* TEAM */
+	Chef: Manos Hablan
+	Contact: impulsocristiano@gmail.com
+	Twitter: @danielsuarezdev
+	From:Sopo, Cundinamarca, Colombia.
+
+/* THANKS */
+	Template: astro-theme-cactus
+	GitHub: @chrismwilliams
+
+/* SITE */
+	Last update: 2022/10/15
+	Language: Spanish
+	Doctype: Astro
+	IDE: VSCode

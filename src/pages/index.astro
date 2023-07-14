@@ -1,0 +1,18 @@
+---
+import SearchBar from "../components/SearchBar";
+import PageLayout from "@/layouts/Base";
+import worksData from "../data/worksData";
+
+const meta = {
+	title: "Manos Hablan",
+	description:
+		"Aprende de la Biblia con sana doctrina y descubre temas interesantes sobre #Biblia #Dios #Jesucristo #Bautistas",
+};
+---
+
+<PageLayout meta={meta}>
+	<section>
+		<h1 class="mb-2 title">Dicionario Lengua de Señas</h1>
+		<SearchBar data={worksData} client:load />
+	</section>
+</PageLayout>

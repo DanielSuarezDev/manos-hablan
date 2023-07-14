@@ -1,0 +1,26 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer>
+	<div>
+		<span>Copyleft &copy; {year}</span>
+		<span aria-label="rocket emoji">🚀</span>
+	</div>
+	<div>
+		<span>Made with love in Colombia</span>
+	</div>
+	<div class="text-gray-400 text-xs">
+		<span>Daniel Suarez Dev</span>
+	</div>
+</footer>
+
+<style>
+	footer {
+		@apply mt-auto flex w-full flex-col items-center justify-center pb-2 text-center align-top text-yellow-500 sm:flex-row sm:justify-between sm:text-xs;
+
+		> div {
+			@apply mb-8 mr-0 sm:mr-4;
+		}
+	}
+</style>

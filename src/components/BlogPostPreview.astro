@@ -1,0 +1,45 @@
+---
+import type { IElement, MDXInstance, Post } from "@/types";
+import { getLocaleTime } from "@/util";
+import { ShareButton } from "../components/ShareButton";
+import Divider from "./Divider.astro";
+import { Like } from "./Like";
+export interface Props extends IElement {
+	post: MDXInstance<Post>;
+	withDesc?: boolean;
+}
+
+const { post, as: Element = "div", withDesc = false } = Astro.props as Props;
+const { publishDate } = post.frontmatter;
+const date = new Date(publishDate);
+const datetime = date.toISOString();
+const postDate = getLocaleTime(date, { month: "short" });
+---
+
+<time datetime={datetime} class="min-w-[120px] text-yellow-500">{postDate}</time
+>
+{
+	post.frontmatter.hero && (
+		<img
+			src={post.frontmatter.heroImage}
+			alt="external link"
+			class="h-56 w-full"
+		/>
+	)
+}
+<Element class="flex items-center justify-between">
+	<a href={post.url} class="inline-block cactus-link line-clamp-1">
+		{post.frontmatter.title}
+	</a>
+
+	<ShareButton client:load post={post} />
+	<Like client:load postUrl={post.url} />
+</Element>
+{
+	withDesc && (
+		<q class="mb-6 line-clamp-3 block italic">
+			{post.frontmatter.description}
+		</q>
+	)
+}
+<Divider />
