@@ -15,7 +15,7 @@ const SearchBar = ({ data }) => {
 	return (
 		<div>
 			<input
-				className="my-4 h-10 w-full rounded-lg border border-gray-300 bg-white px-5 pr-16 text-sm  dark:bg-gray-800 dark:text-white"
+				className="my-4 h-10 w-full rounded-lg border border-gray-300 bg-white px-5 pr-16 text-sm  dark:bg-gray-800 dark:text-white focus:outline-none focus:border-indigo-500"
 				type="text"
 				placeholder="Buscar..."
 				value={search}
