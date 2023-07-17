@@ -1,6 +1,6 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
-
+import worksData from "../data/worksData";
 const url = new URL(Astro.request.url);
 ---
 
@@ -65,6 +65,9 @@ const url = new URL(Astro.request.url);
 				>Recursos
 			</a> -->
 		</nav>
+	</div>
+	<div class="bg-green-300 text-green-900 px-2 py-1 rounded">
+		{worksData.length} Palabras traducidas
 	</div>
 	<ThemeToggle />
 	<button

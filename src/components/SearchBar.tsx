@@ -23,7 +23,7 @@ const SearchBar = ({ data }) => {
 			/>
 			{dataToRender.map((item, index) => (
 				<div key={index} className="my-4">
-					<h2>{item.title}</h2>
+					<h2>{item.title}:</h2>
 					<img
 						src={item.url}
 						alt={item.title}
